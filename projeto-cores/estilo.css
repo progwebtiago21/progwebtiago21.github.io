@@ -1,0 +1,26 @@
+#azul {
+    background: #3A6BF0;
+    height: 100px;
+    width: 100px;
+    float: left;
+    cursor: pointer;
+}
+
+
+#verde {
+    background: #0DA71A;
+    height: 100px;
+    width: 100px;
+    float: left;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#laranja {
+    background: #E07600;
+    width: 100px;
+    height: 100px;
+    float: left;
+    cursor: pointer;
+}
