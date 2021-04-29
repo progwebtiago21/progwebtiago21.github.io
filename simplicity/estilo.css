@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;900&display=swap'); 
+/* importando fontes do Google Fonts */
+
+
+ *{
+    box-sizing: border-box;
+    /* margin: 0;
+    padding: 0; */
+}
+
+html {
+    /* tamanho padrão é 16px ou 12pt */
+    font-size: 16px;
+    scroll-behavior: smooth;
+
+    /* 
+        UNIDADES DE MEDIDA RELATIVAS
+        % - se colocar 200%, teremos o dobro de 16px, ou seja, 32px.
+        EM - funciona igual a porcentagem, só que ao invés de 200% eu declaro, 2.0em, por exemplo. EM refere-se sempre ao elemento pai.
+        REM - É igual a EM, mas refere-se ao elemento raiz. 
+    */
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+}
+
+img, iframe, video {
+    max-width: 100%;
+    /* max-height: 100%; */
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+h2 {
+    font-size: 2.0rem;
+    text-align: center;
+}
+
+
+
+/* FORMANTANDO O CABEÇALHO */
+
+header {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none; 
+    text-transform: uppercase;
+    color:#3b90f0;
+    display: inline-block;
+    width: 25%;
+    font-size: 1.3rem;
+    line-height: 2.7rem;
+    transition: 0.3s;
+}
+
+nav a:hover, nav a:active {
+    background-color: #3b90f0;
+    color: #fff;
+}
+
+
+
+/* FORMATANDO ÁREA DE DESTAQUE */
+.destaque {
+    background-image: url(imagens/imagem-destaque-fundo.jpg);
+    height: 70vh;  /* viewport height e viewport width - unidades de medida relativas (à tela de usuário) */
+    display: table;
+    width: 100%;
+}
+
+
+.container {
+    background-color: rgba(0, 0, 0, .6);
+    height: 70vh;
+    /* alinhando verticalmente com tabela */
+    display: table-cell;
+    vertical-align: middle;
+    /* alinhando verticalmente com flexbox    
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+}
+
+.fundo-texto {
+    background-color: rgba(255, 255, 255, .8);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+    .destaque h1 {
+        color: #df1a9c;
+        font-weight: bold;
+        font-size: 3.5rem;
+        margin-bottom: 0;
+    }
+
+    .destaque p {
+        font-size: 1.8rem;
+        color: #3b90f0;
+    }
+
+.fundo-cta {
+    background-color: #df1a9c;
+}
+
+.cta {
+    max-width: 1200px;
+    margin: 0 auto; /* alinha o elemento ao centro da tela horizontalmente */
+    text-align: center;
+}
+
+.cta p {
+    margin: 0;
+    padding:10px 0;
+    font-size: 1.1rem;
+    color:white;
+}
+
+main {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.imagens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.imagens img {
+    max-width: 30%;
+    margin-top: 14px;
+}
+
+.fundo-video {
+    background-image: url(imagens/fundo-madeira.jpg);
+}
+
+.video {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.video h2 {
+    color: white;
+}
+
+    /* =========== VÍDEO DO YOUTUBE RESPONSIVO =============== */
+    .video-responsivo {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height:0;
+        margin:30px 20px
+    }
+
+    .video-responsivo iframe {
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+
+
+
+
+/* Formatando o Rodapé */
+
+.fundo-rodape {
+    background: #333;
+    border-bottom: #3b90f0 8px solid;
+}
+
+footer {
+    color: #999;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6px 0;
+}
+
+
+/* Formatando o Formulário */
+.fundo-form {
+    background: url(imagens/fundo-contato.jpg) center;
+    background-size: cover;
+    padding: 50px 0;
+}
+
+.formulario {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, .8);
+    padding: 20px;
+}
+
+.formulario label {
+    display: flex;
+}
+
+.formulario input, .formulario textarea {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formulario input:hover, .formulario input:active, .formulario textarea:hover, .formulario textarea:active {
+    background: #3b8ff022;
+}
+
+.enviar {
+    background: #3b90f0;
+    color:#fff;
+    padding: 10px 60px;
+    border: 1px solid #3b90f0;
+    /* transition: all 0.5s; */
+}
+
+.enviar:hover, .enviar:active {
+    background: #fff;
+    color: #3b90f0;
+    border: 1px solid #3b90f0;
+} 
+
+
+/* QUANDO A TELA FOR MAIOR QUE 700PX */
+@media screen and (min-width:700px) {
+   
+    header {
+        max-width: 1200px; /* limite o tamanho do container */
+        margin: 0 auto; /* centraliza */
+        display: flex; /* transforma os elementos deste container em flex, ou seja, deixa de ser display block por padrão */
+        justify-content: space-between; /* coloca um elemento de cada lado, igualando o espaço entre eles */
+        align-items: center; /* alinha os elementos verticalmente */
+        flex-wrap: wrap; /* evita que os itens estourem o container */
+    }
+
+    .logo {
+        width: 30%;
+    }
+
+    nav {
+        width: 60%;
+    }
+
+    .formulario label {
+        display: none;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .formulario input {
+        width: 31%;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/* SEM PREGUIÇA DE FAZER MEDIA QUERIES
+@media screen and (min-width:1000px) {
+
+        .logo {
+            width: 20%;
+        }
+}
+
+ */
